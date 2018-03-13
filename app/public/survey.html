@@ -234,10 +234,10 @@
     
             $("#add-btn").on("click", function(event){
                 event.preventDefault();
-                var newFriend = {
+                var newfriend = {
                     name: $("#name").val().trim(),
                     imageLink: $("#imageLink").val().trim(),
-                    scores: [
+                    scores:[ 
                         $("#questionOne").val().trim(),
                         $("#questionTwo").val().trim(),
                         $("#questionThree").val(),
@@ -251,15 +251,14 @@
                         $("#questionEleven").val(),
                         $("#questionTwelve").val()
                     ]
-                }
-                console.log(newFriend);
+                };
+                console.log(newfriend);
 
-                $.post("/api/friends", newFriend)
+                $.post("/api/friends", newfriend)
                     .done(function (data) {
-                    console.log(data);
-                    alert("Adding friend...");
+                        console.log(data);
+                        alert("Adding friend...");
                 });
-
             });
    
     

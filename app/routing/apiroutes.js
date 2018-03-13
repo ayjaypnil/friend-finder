@@ -1,17 +1,19 @@
-app.get("api/friends", function(req, res) {
-  res.json(friends);
-});
+var path = require("path");
 
-app.post("/api/friends", function(req, res) {
-  // req.body hosts is equal to the JSON post sent from the user
-  // This works because of our body-parser middleware
-  var newfriend = req.body;
+var friends = require("../data/friends.js")
 
-  newfriend.routename = newfriend.name.replace(/\s+/g, "").toLowerCase();
+  module.exports = function (app) {
+    app.get("/api/friends", function(req, res) {
+      res.json(friends);
+    });
+  
 
-  console.log(newfriend);
+    app.post("/api/friends", function(req, res) {
+      var newfriend = req.body;
+      // newfriend.routename = newfriend.name.replace(/\s+/g, "").toLowerCase();
+        console.log(newfriend);
+      friends.push(newfriend);
 
-  friends.push(newfriend);
-
-  res.json(newfriend);
-});
+      res.json(newfriend);
+    });
+  }

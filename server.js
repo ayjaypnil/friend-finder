@@ -8,6 +8,11 @@ var port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(bodyParser.text());
+
+require("./app/routing/htmlroutes.js")(app);
+require("./app/routing/apiroutes.js")(app);
+require("./app/data/friends.js");
 
 
 
@@ -16,7 +21,6 @@ app.use(bodyParser.json());
 
 
 
-
-
-
-app.listen(port);
+app.listen(port, function() {
+  console.log("Friend Finder app is listening on PORT: " + port);
+});
