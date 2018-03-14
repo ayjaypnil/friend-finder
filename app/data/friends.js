@@ -1,18 +1,18 @@
 var friends = [
   {
-    Name: "Hulk",
+    name: "Hulk",
     imageLink:
       "https://vignette.wikia.nocookie.net/marveldatabase/images/7/7f/Bruce_Banner_%28Earth-TRN517%29_from_Marvel_Contest_of_Champions_001.png/revision/latest?cb=20150210033450",
     scores: ["4", "5", "1", "3", "1", "3", "2", "3", "4", "4", "5", "5"]
   },
   {
-    Name: "Batman",
+    name: "Batman",
     imageLink:
       "https://vignette.wikia.nocookie.net/batman/images/d/d3/Batm.jpg/revision/latest?cb=20081002204602",
     scores: ["5", "5", "5", "4", "3", "5", "4", "4", "4", "1", "5", "3"]
   },
   {
-    Name: "Spiderman",
+    name: "Spiderman",
     imageLink: "https://i.annihil.us/u/prod/marvel/i/mg/6/60/538cd3628a05e.jpg",
     scores: ["4", "3", "5", "5", "1", "3", "4", "3", "2", "1", "5", "3"]
   },
